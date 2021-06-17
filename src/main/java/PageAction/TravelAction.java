@@ -52,6 +52,18 @@ public class TravelAction {
         return false;
     }
 
+    public boolean verifyThirdBannerTitle(String expectedTitle) {
+        String actualThirdBannerTitle = getText(travelPage.thirdBannerTitle.getBy());
+        System.out.println("actual Third Banner Title: " + actualThirdBannerTitle);
+        System.out.println("expected Third Title: "+expectedTitle);
+        System.out.println("Result of Third banner: " +actualThirdBannerTitle.equalsIgnoreCase(expectedTitle));
+        //SOFT_ASSERT.assertEquals(actualSecondBannerTitle.equalsIgnoreCase(expectedTitle), true, "Second Title is not correct");
+        if (actualThirdBannerTitle.equalsIgnoreCase(expectedTitle) == true) {
+            return true;
+        }
+        return false;
+    }
+
 
 
 }
